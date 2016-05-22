@@ -5,8 +5,8 @@ class State < ActiveRecord::Base
   has_many :zipcodes
   has_many :counties
 
-  validates :abbr, :uniqueness => { :case_sensitive => false }, :presence => true
-  validates :name, :uniqueness => { :case_sensitive => false }, :presence => true
+  validates :abbr, uniqueness:  { :case_sensitive => false }, presence: true
+  validates :name, uniqueness: { :case_sensitive => false }, presence: true
   
   def cities
     zipcodes.map(&:city).sort.uniq
