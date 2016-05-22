@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "generators/my_zipcode_gem/version"
+require "generators/us_zipcode/version"
 
 Gem::Specification.new do |s|
   s.name        = "us_zipcode"
@@ -8,7 +8,6 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Chakreshwar"]
   s.email       = ["chakreshwar.sharma@yahoo.com"]
-  s.homepage    = "https://github.com/ChakreshwarSharma/us_zipcode"
   s.summary     = %q{A Ruby gem to handle all things zipcode.}
   s.description = %q{A Ruby gem for looking up and manipulating US postal codes and geocodes.}
   s.licenses    = ['MIT']
