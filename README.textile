@@ -69,11 +69,11 @@ bc. <%= select_tag "state",options_from_collection_for_select(State.all, "id", "
 
 Create mycontroller & paste the following code:
 
-  bc. def get_cities_by_state
+bc. def get_cities_by_state
     @cities = Zipcode.group(:city).where(state_id: params[:state_id])
   end
 
-  def get_county_and_zip_by_city    
+bc.  def get_county_and_zip_by_city    
     @zipcodes = Zipcode.find_by_city(params[:city])
   end
 
