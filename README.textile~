@@ -73,7 +73,7 @@ bc. def get_cities_by_state
     @cities = Zipcode.group(:city).where(state_id: params[:state_id])
   end
 
-  def get_county_and_zip_by_city    
+bc.  def get_county_and_zip_by_city    
     @zipcodes = Zipcode.find_by_city(params[:city])
   end
 
@@ -97,10 +97,10 @@ bc. $("#county").html('<%= escape_javascript(select_tag "county", options_from_c
 
 In the last update your routes:
 
-  bc. scope '/mycontroller' do
-    get 'get_cities_by_state' => 'mycontroller#get_cities_by_state'
-    get 'get_county_and_zip_by_city' => 'mycontroller#get_county_and_zip_by_city'
-  end
+bc. scope '/mycontroller' do
+     get 'get_cities_by_state' => 'mycontroller#get_cities_by_state'
+     get 'get_county_and_zip_by_city' => 'mycontroller#get_county_and_zip_by_city'
+    end
 
 
 
