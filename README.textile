@@ -52,7 +52,7 @@ On city selection, you can see the corresponding county with its zip code.
 
 Write the following code in your view:
 
-<%= select_tag "state",options_from_collection_for_select(State.all, "id", "name") %>
+bc. <%= select_tag "state",options_from_collection_for_select(State.all, "id", "name") %>
 <div id ="city"></div>
 <div id ="county"></div>
 <script>
@@ -69,7 +69,7 @@ Write the following code in your view:
 
 Create mycontroller & paste the following code:
 
-  def get_cities_by_state
+  bc. def get_cities_by_state
     @cities = Zipcode.group(:city).where(state_id: params[:state_id])
   end
 
@@ -81,7 +81,7 @@ Create the following two js.erb files in app/views/mycontroller/
 
 1.get_cities_by_state.js.erb & paste the following code:
 
-$("#city").html('<%= escape_javascript(select_tag "city", options_from_collection_for_select(@cities, :id, :city)) %>');
+bc. $("#city").html('<%= escape_javascript(select_tag "city", options_from_collection_for_select(@cities, :id, :city)) %>');
 $("#city").on("change", function(){
   $.ajax({
     url: "/home/get_county_and_zip_by_city",
@@ -93,11 +93,11 @@ $("#city").on("change", function(){
 
 2.get_county_and_zip_by_city.js.erb
 
-$("#county").html('<%= escape_javascript(select_tag "county", options_from_collection_for_select(@zipcodes, :id, :county_and_zip)) %>');
+bc. $("#county").html('<%= escape_javascript(select_tag "county", options_from_collection_for_select(@zipcodes, :id, :county_and_zip)) %>');
 
 In the last update your routes:
 
-  scope '/mycontroller' do
+  bc. scope '/mycontroller' do
     get 'get_cities_by_state' => 'mycontroller#get_cities_by_state'
     get 'get_county_and_zip_by_city' => 'mycontroller#get_county_and_zip_by_city'
   end

@@ -52,7 +52,7 @@ On city selection, you can see the corresponding county with its zip code.
 
 Write the following code in your view:
 
-<%= select_tag "state",options_from_collection_for_select(State.all, "id", "name") %>
+bc. <%= select_tag "state",options_from_collection_for_select(State.all, "id", "name") %>
 <div id ="city"></div>
 <div id ="county"></div>
 <script>
@@ -177,8 +177,3 @@ That's about it.
 
 Let me know if there are any errors.  I cut and pasted the code above from a working application, but there may be some gotchas that I missed.
 
-h2. LOG
-
-h3. 05/03/2011:
-
-Initial Release
