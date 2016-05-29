@@ -8,6 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Chakreshwar"]
   s.email       = ["chakreshwar.sharma@yahoo.com"]
+  s.homepage    = "https://github.com/ChakreshwarSharma/us_zipcode"
   s.summary     = %q{A Ruby gem to handle all things zipcode.}
   s.description = %q{A Ruby gem for looking up and manipulating US postal codes and geocodes.}
   s.licenses    = ['MIT']

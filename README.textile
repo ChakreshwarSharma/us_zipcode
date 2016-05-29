@@ -11,7 +11,7 @@ bc. gem 'us_zipcode'
 
 Run:
 
-bc. rake bundle install
+bc. bundle install
 
 Generate the models and populate the data:
 

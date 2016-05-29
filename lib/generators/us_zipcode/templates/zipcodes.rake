@@ -5,7 +5,7 @@ namespace :zipcodes do
   desc "Update states table"
   task :update_states => :environment do
     puts ">>> Begin update of states table..."
-    url = "https://github.com/midwire/free_zipcode_data/raw/master/all_us_states.csv"
+    url = "https://github.com/ChakreshwarSharma/us_zipcode_data/raw/master/all_us_states.csv"
     data = open(url)
     file = nil
     if data.is_a? StringIO
@@ -28,7 +28,7 @@ namespace :zipcodes do
   desc "Update counties table"
   task :update_counties => :update_states do
     puts ">>> Begin update of counties table..."
-    url = "https://github.com/midwire/free_zipcode_data/raw/master/all_us_counties.csv"
+    url = "https://github.com/ChakreshwarSharma/us_zipcode_data/raw/master/all_us_counties.csv"
     data = open(url)
     file = nil
     if data.is_a? StringIO
@@ -53,7 +53,7 @@ namespace :zipcodes do
   desc "Update zipcodes table"
   task :update_zipcodes => :update_counties do
     puts ">>> Begin update of zipcodes table..."
-    url = "https://github.com/midwire/free_zipcode_data/raw/master/all_us_zipcodes.csv"
+    url = "https://github.com/ChakreshwarSharma/us_zipcode_data/raw/master/all_us_zipcodes.csv"
     data = open(url)
     file = nil
     if data.is_a? StringIO

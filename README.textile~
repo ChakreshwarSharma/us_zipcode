@@ -84,7 +84,7 @@ Create the following two js.erb files in app/views/mycontroller/
 bc. $("#city").html('<%= escape_javascript(select_tag "city", options_from_collection_for_select(@cities, :id, :city)) %>');
 $("#city").on("change", function(){
   $.ajax({
-    url: "/home/get_county_and_zip_by_city",
+    url: "/mycontroller/get_county_and_zip_by_city",
     dataType: "script",
     method: "get",
     data: {city: $("#city select option:selected"). text()}
